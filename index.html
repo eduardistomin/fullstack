@@ -8,25 +8,28 @@
 </head>
   <body>
     <header>
-      <img class="logo" src="img/svg/logo.svg" alt="logo" height="96" width="167"/>
+      <div class="header_cont">
+      <div class="cont_menu">
+      <a href="https://eduardistomin.github.io/fullstack/"><img class="logo" src="img/svg/logo.svg" alt="logo" height="96" width="167"/></a>
       <ul class="nav">
-          <li class="greed-col menu"><a href="">О молоке</a></li>
-          <li class="greed-col menu"><a href="">Продукция</a></li>
-          <li class="greed-col menu"><a href="">Доставка</a></li>
-          <li class="greed-col menu"><a href="">Подписка</a></li>
-          <li class="greed-col menu"><a href="">Контакты</a></li>
-          <li class="greed-col"><a class="phone" href="">8-800-555-34-05</a></li>
+          <li class="greed-col menu"><a href="#">О молоке</a></li>
+          <li class="greed-col menu"><a href="#">Продукция</a></li>
+          <li class="greed-col menu"><a href="#">Доставка</a></li>
+          <li class="greed-col menu"><a href="#">Подписка</a></li>
+          <li class="greed-col menu"><a href="#">Контакты</a></li>
+          <li class="greed-col phone_num"><a class="phone" href="tel:88005553405">8-800-555-34-05</a></li>
       </ul>
+    </div>
       <h1 class="headline">Свежее фермерское молоко</h1>
-      <h1 class="headline2">100% натуральный состав</h1>
-      <p class="offer">Оформите подписку и получайте вкусные и полезные</br>продукты каждый день со скидкой 15 %</p>
-      <div class="button">
-        <a href="#" class="issue"><span class="button__label">Оформить</span></a>
-      </div>
+      <h2 class="subtitle">100% натуральный состав</h2>
+      <p class="offer">Оформите подписку и получайте вкусные и полезные продукты каждый день со скидкой 15 %</p>
+        <a href="#" class="issue"><div class="button"><span class="button__label">Оформить</span></div></a>
+      <img class="bottles" src="img/bottles.png"/>
+    </div>
     </header>
     <main>
       <section class="advantages">
-        <h2 class="advant">Почему наши молочные продукты</br>самые вкусные и полезные</h2>
+        <h2 class="advant">Почему наши молочные продукты самые вкусные и полезные</h2>
         <div class="conteiner">
         <div class="advantage">
           <h3 class="adv">Собственное производство</h3>
@@ -48,6 +51,7 @@
       </div>
       </section>
       <section class="products">
+        <div class="products_container">
         <h2 class="product">Продукция</h2>
         <ul class="product_nav">
             <li class="greed-col prodnav"><a href="">Популярное</a></li>
@@ -67,8 +71,8 @@
             <p class="product_name">Кефир</p>
             <p class="product_price">80 Р</p>
           </div>
-          <div class="prod smetana">
-            <img class="smetana_pic" src="img/smetana.png" alt="сметана"/>
+          <div class="prod sourcream">
+            <img class="sourcream_pic" src="img/sourcream.png" alt="сметана"/>
             <p class="product_name">Сметана</p>
             <p class="product_price">80 Р</p>
           </div>
@@ -81,6 +85,7 @@
         <div class="button product_but">
           <a href="#" class="issue"><span class="button__label prod_but_label">Сделать заказ</span></a>
         </div>
+      </div>
       </section>
       <section class ="delivery">
         <h2 class="deliv">Доставка и оплата</h2>
@@ -105,11 +110,14 @@
         </div>
       </section>
     <section class="subscribe">
-      <h2 class="subs">Свежие молочные продукты</br>каждый день</h2>
-      <p class="subs_descript">Оформите подписку на нашу продукцию</br>и получайте ее со скидкой 15%</p>
+      <div class="subscribe_cont">
+      <h2 class="subs">Свежие молочные продукты каждый день</h2>
+      <p class="subs_descript">Оформите подписку на нашу продукцию и получайте ее со скидкой 15%</p>
       <div class="button subs_but">
         <a href="#" class="issue"><span class="button__label subs_label">Оформить подписку</span></a>
       </div>
+      <img class="biscuit" src="img/biscuit.png">
+    </div>
     </section>
   </main>
     <footer>
@@ -117,16 +125,16 @@
       <h2 class="contact">Контакты</h2>
       <div class="cont_container">
       <div class="contact_adress">
-      <img class="cont" src="img/svg/position.svg"/>
-      <span class="contact_note">630091, Новосибирск,</br>Красный проспект, 64</span>
+      <i class="cont_adress"></i>
+      <span class="contact_note adress_note">630091, Новосибирск, Красный проспект, 64</span>
       </div>
       <div class="contact_mail">
-      <img class="cont" src="img/svg/mail.svg"/>
-      <span class="contact_note">milk@gmail.com</span>
+      <i class="cont_mail"></i>
+      <a href="mailto:milk@gmail.com" class="contact_note mail_note">milk@gmail.com</a>
       </div>
       <div class="contact_number">
-      <img class="cont" src="img/svg/phone.svg"/>
-      <span class="contact_note">8-800-555-34-05</span>
+      <i class="cont_number"></i>
+      <a href="tel:88005553405" class="contact_note number_note">8-800-555-34-05</a>
     </div>
       </div>
       <img class="map" src="img/map.png"/>
@@ -135,8 +143,8 @@
         <h3 class="form">Остались вопросы?</h3>
         <p class="form_descript">Заполните форму и мы Вам перезвоним</br>в течение нескольких минут</p>
         <form>
-        <p class="input_name"><input type="text" placeholder="Ваше имя"></p>
-        <p class="input_tel"><input type="tel" placeholder="Ваш телефон"></p>
+        <label class="input_name"><input type="text" placeholder="Ваше имя"></label>
+        <label class="input_tel"><input type="tel" placeholder="Ваш телефон"></label>
         <p class="form_but"><input class="form_button" type="submit" value="Позвонить мне"></p>
       </form>
         <p class="warn">Нажимая кнопку, вы даете согласие на обработку своих персональных данных.</p>
