@@ -17,7 +17,7 @@
 }
 
 body {
-  width: 100%;
+
   min-width: 320px;
   margin: 0 auto;
 }
@@ -92,6 +92,10 @@ margin-right: 0;
 
 }
 
+.greed-col:last-child {
+    margin-right: 0;
+}
+
 .greed-col a {
   text-decoration: none;
   color: #000000;
@@ -141,27 +145,27 @@ h1 {
 }
 
 .button {
+  box-sizing: border-box;
+  text-decoration: none;
   width: 223px;
   height: 56px;
   border-radius: 30px;
   background-color: #268224;
   opacity: 0.8;
   margin-left: 8.75%;
-
-}
-
-.issue {
-  text-decoration: none;
-}
-
-.button__label {
   display: inline-block;
   color: #FFFFFF;
   opacity: 0.7;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
-  margin: 15px 66px;
+  padding: 15px 66px;
+
+}
+
+
+.button__label {
+
 }
 
 .button:hover {
@@ -207,6 +211,7 @@ h1 {
   background-size: cover;
   color: #000000;
   padding-bottom: 159px;
+  padding-top: 150px;
 }
 
 .products_container {
@@ -215,7 +220,7 @@ h1 {
 }
 
 .product {
-  padding-top: 150px;
+
   margin-top: 0;
   margin-bottom: 88px;
   text-align: center;
@@ -261,20 +266,21 @@ h1 {
 }
 
 .product_but {
+  display: block;
   margin: 0 auto;
+  padding: 15px 49px;
 }
 
-.prod_but_label {
-  margin: 15px 49px;
-}
+
 
 .delivery {
   max-width: 1440px;
   margin: 0 auto;
   padding-bottom: 160px;
+  padding-top: 147px;
 }
 .deliv {
-  padding-top: 147px;
+
   margin-top: 0;
   margin-bottom: 67px;
   text-align: center;
@@ -293,6 +299,7 @@ h1 {
   margin-left: 122px;
   margin-right: 122px;
   justify-content: space-between;
+
 }
 
 .cube {
@@ -300,6 +307,24 @@ h1 {
   border-radius: 20px;
   width: 345px;
   padding: 28px 42px 32px 42px;
+  position: relative;
+
+}
+
+.cube:not(:last-child) {
+  margin-right: 80px;
+}
+
+.cube:not(:last-child)::after {
+  content:"";
+  display: block;
+  background: url("../img/svg/dots.svg") no-repeat center/contain;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: -65px;
+  top: calc(50% - 25px);
+
 }
 
 .del_name {
@@ -322,6 +347,7 @@ h1 {
   background-size: cover;
   color: #000000;
   padding-bottom: 419px;
+  padding-top: 148px;
 }
 
 .subscribe_cont {
@@ -338,7 +364,7 @@ h1 {
 
 .subs {
   width: 58%;
-  padding-top: 148px;
+
   margin: 0 auto;
   margin-top: 0;
   margin-bottom: 157px;
@@ -353,12 +379,10 @@ h1 {
 }
 
 .subs_but {
+  display: block;
   width: 345px;
   margin-left: 50.49%;
-}
-
-.subs_label {
-  margin: 15px 85px;
+  padding: 15px 85px;
 }
 
 footer {
@@ -636,14 +660,11 @@ input.form_button {
     width: 160px;
     height: 40px;
     border-radius: 30px;
-  }
-
-  .button__label {
-
     font-size: 14px;
     font-weight: 700;
-    margin: 10px 45px;
+    padding: 10px 45px;
   }
+
 
   .bottles {
     width: 300px;
@@ -675,17 +696,20 @@ input.form_button {
 
   .products {
     padding-bottom: 80px;
+    padding-top: 100px;
   }
 
   .product {
     width: 80%;
-    padding-top: 100px;
+
   }
 
   .prodnav {
     font-size: 12px;
     margin-right: 20px;
   }
+
+
 
 .product_cont {
     flex-wrap: wrap;
@@ -700,15 +724,12 @@ input.form_button {
   font-size: 14px;
 }
 
-.prod_but_label {
-  margin: 10px 30px;
+.product_but {
+  padding: 10px 30px;
 }
 
 .delivery {
   padding-bottom: 80px;
-}
-
-.deliv {
   padding-top: 100px;
 }
 
@@ -721,17 +742,25 @@ input.form_button {
 }
 
 .cube {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+
 }
 
-.dots {
-  margin: 0 auto;
+.cube:not(:last-child) {
+  margin-right: 0;
+}
+
+.cube:not(:last-child)::after {
+  right: calc(50% - 25px);
+  top: calc(100%);
+
 }
 
 .subscribe {
   background-image: url(../img/subscription641.jpg);
   padding-bottom: 62.5%;
+  padding-top: 100px;
 }
 
 .biscuit {
@@ -742,7 +771,6 @@ input.form_button {
 
 .subs {
     width: 80%;
-    padding-top: 100px;
     margin-bottom: 24.5%;
 }
 
@@ -754,11 +782,9 @@ input.form_button {
 
 .subs_but {
   margin-left: 45%;
+  padding: 12px 12px;
   }
 
-.subs_label {
-  margin: 12px 12px;
-}
 
 footer {
   flex-direction: column;
@@ -794,9 +820,11 @@ footer {
 }
 }
 
-@media (min-width: 320px) and (max-width: 640px) {
+@media (max-width: 640px) {
 
-
+  body {
+    min-width: 320px;
+  }
 
   h1 {
     font-size: 18px;
@@ -869,16 +897,15 @@ footer {
   }
 
   .button {
+    display: block;
     width: 172px;
     height: 40px;
     margin-left: 0;
     margin: 0 auto;
+    font-size: 14px;
+    padding: 12px 54px;
 }
 
-  .button__label {
-    font-size: 14px;
-    margin: 12px 54px;
-}
 
   .bottles {
     display: none;
@@ -920,10 +947,10 @@ footer {
     background-image: none;
     background-color: rgba(38, 130, 36, 0.2);
     padding-bottom: 44px;
+    padding-top: 50px;
   }
 
   .product {
-    padding-top: 50px;
     margin-bottom: 25px;
   }
 
@@ -969,16 +996,17 @@ footer {
     font-size:  10px;
   }
 
-  .prod_but_label {
-    margin: 12px 35px;
+  .product_but {
+    padding: 12px 35px;
   }
 
   .delivery {
     padding-bottom: 40px;
+    padding-top: 50px;
   }
 
   .deliv {
-    padding-top: 50px;
+
     margin-bottom:  28px;
   }
 
@@ -1003,6 +1031,17 @@ footer {
     padding: 17px 13px 10px 23px;
   }
 
+  .cube:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .cube:not(:last-child)::after {
+    width: 30px;
+    height: 20px;
+    right: calc(50% - 15px);
+    top: calc(100%);
+
+  }
   .del_name {
     margin-bottom: 3px;
   }
@@ -1021,10 +1060,11 @@ footer {
     background-image: none;
     background-color: rgba(38, 130, 36, 0.2);
     padding-bottom: 57px;
+    padding-top: 50px;
   }
 
   .subs {
-    padding-top: 50px;
+
     margin-bottom: 50px;
     width: 80%;
   }
@@ -1037,8 +1077,8 @@ footer {
     width: 90%;
   }
 
-  .subs_label {
-    margin: 12px 18px;
+  .subs_but {
+    padding: 12px 18px;
   }
 
   .biscuit {
